@@ -1,0 +1,26 @@
+<div>
+  <h1>Password strength analyzer and generator</h1>
+  <form (ngSubmit)="evaluerMotDePasse()">
+    <strong><label for="motDePasse" style="font-size: 20px;color: rgb(179, 96, 163);">Evaluate your password:</label></strong>
+    <div class="input-group">
+      <input type="{{ afficherMotDePasse ? 'text' : 'password' }}" id="motDePasse" [(ngModel)]="motDePasse" name="motDePasse" required>
+      <button type="button" (click)="toggleAffichageMotDePasse()">
+        {{ afficherMotDePasse ? 'hide' : 'show' }}
+      </button>
+    </div>
+    <button type="submit">Evaluate</button>
+    <p class="very-weak" *ngIf="suggestion === 'Very weak'">Very weak</p>
+    <p class="weak" *ngIf="suggestion === 'Weak'">Weak</p>
+    <p class="good" *ngIf="suggestion === 'Good'">Good</p>
+    <p class="strong" *ngIf="suggestion === 'Strong'">Strong</p>
+    <p class="very-strong" *ngIf="suggestion === 'Very Strong'">Very Strong</p>
+    <p *ngIf="suggestion === 'Please choose a stronger password.'">Please choose a stronger password.</p>
+    <p>Password length: {{ longueurMotDePasse }}</p>
+    <p>accuracy of numbers {{ precisionChiffres }}%</p>
+    <p>accuracy of special symbols: {{ precisionSpeciaux }}%</p>
+    <p *ngIf="estimatedCrackTime">Time to crack : {{ estimatedCrackTime }}</p>
+  </form>
+
+  <button type="button" (click)="genererMotDePasseFort()">Generate a strong password</button>
+  <p *ngIf="motDePasseFort">Generated strong password: {{ motDePasseFort }}</p>
+</div>

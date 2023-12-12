@@ -1,0 +1,120 @@
+div {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #463f3f;
+  font-size: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 8px;
+  color: #333;
+}
+
+input {
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  margin-bottom: 16px;
+  background-color: #4f288d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #000000;
+}
+
+button[type="submit"] {
+  background-color: #4f288d;
+}
+
+button[type="submit"]:hover {
+  background-color: #000000;
+}
+
+p {
+  margin-top: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+p.very-weak,
+p.weak {
+  color: red;
+  font-size: 24px;
+}
+
+p.good {
+  color: yellow;
+  font-size: 24px;
+}
+
+p.strong {
+  color: green;
+  font-size: 24px;
+}
+
+p.very-strong {
+  color: blue;
+  font-size: 24px;
+}
+
+div button[type="button"] {
+  background-color: #4f288d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+div button[type="button"]:hover {
+  background-color: #000000;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 16px;
+  width: 360px;
+}
+
+.input-group input {
+  width: 270px;
+  padding: 10px;
+
+}
+
+.input-group button {
+  position: relative;
+  padding: 10px;
+  margin-left: 6px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.input-group button:focus {
+  outline: none;
+}
